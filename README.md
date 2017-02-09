@@ -50,24 +50,24 @@ Note: Use forward slashes for the paths even if you are on Windows, or you may h
 
 ## Localizing Cleo Portal
 
-The Cleo Portal language files are located at `webserver/mftportal/lang/` under the folder where Cleo Harmony or Cleo VLTrader is installed.
+The Cleo Portal language files are located in `webserver/mftportal/lang/` under the folder where Cleo Harmony or Cleo VLTrader is installed.
 This is where you can find the POT file, `en-US.pot`.
-This is also where the JSON files should go.
+This is also where the JSON files go.
 
-To add a custom localization to Cleo Portal, from start to finish:
+To add a custom localization to Cleo Portal:
 
 1. Open the POT file in Poedit or something similar.
 
 2. Start a new translation, specifying the language you will be translating to.
 Do not choose `English (United States)` since that is the language already built into Portal.
 
-3. Translate some or all of the text strings. Any that you do not translate will fall back to the original American English.
+3. Translate some or all of the text strings. Anything you do not translate will fall back to the original American English.
 
 4. Save the translation as a PO file.
 
-5. Run the localization tool's compile command to create a JSON file from the PO file.
+5. Use the localization tool to compile the PO file to a JSON file.
 
-6. Copy the JSON file to the Cleo Portal language files folder, the same place where you got the POT file from.
-You could also just specify that folder as the `target` for the compile command and save a step, but be aware that doing so will overwrite any existing JSON file with the same name that is already in there.
+6. Copy the JSON file to the Cleo Portal languages folder (the same place you got the POT file from).
+You can also just specify that folder as the `target` for the localization tool's compile command and save a step, but be aware that doing so will overwrite any existing JSON file there with the same name.
 
-Cleo Portal chooses the localization to use according to the user's browser settings. To test your new localization, set your browser's preferred language accordingly and then open or refresh Cleo Portal.
+Cleo Portal chooses the localization to use according to the user's browser settings. To test a localization, set your browser's preferred language accordingly and then open or refresh Cleo Portal.
