@@ -3,15 +3,15 @@ const gettext = require('gulp-angular-gettext');
 const gulp = require('gulp');
 const yargs = require('yargs');
 
-const file = yargs.argv.file;
+const source = yargs.argv.source;
 
-if (!file) {
-  throw new Error('Please specify the file to compile: --file=path/to/file.po');
-} else if (file.indexOf('*') === -1) { // allow globbing
-  if (!fs.existsSync(file)) {
-    throw new Error('"' + file + '" does not exist!');
-  } else if (!fs.statSync(file).isFile()) {
-    throw new Error('"' + file + '" is not a file!');
+if (!source) {
+  throw new Error('Please specify the source file to compile: --source=path/to/source/file.po');
+} else if (source.indexOf('*') === -1) { // allow globbing
+  if (!fs.existsSync(source)) {
+    throw new Error('"' + source + '" does not exist!');
+  } else if (!fs.statSync(source).isFile()) {
+    throw new Error('"' + source + '" is not a file!');
   }
 }
 
@@ -26,7 +26,7 @@ if (!target) {
 }
 
 gulp.task('compile', function () {
-  return gulp.src(file)
+  return gulp.src(source)
     .pipe(gettext.compile({ format: 'json' }))
     .pipe(gulp.dest(target));
 });

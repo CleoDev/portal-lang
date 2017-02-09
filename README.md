@@ -40,11 +40,11 @@ $ npm install
 To compile a PO file to a JSON file (run from within the `portal-localization` folder):
 
 ```shell
-$ npm run compile -- --file=path/to/file.po --target=path/to/target/folder/
+$ npm run compile -- --source=path/to/source/file.po --target=path/to/target/folder/
 ```
 
-- `file`: a PO file (globbing is supported, e.g. `path/to/*.po`)
-- `target`: where to put the JSON file
+- `source`: the source file to compile (globbing is supported, e.g. `path/to/source/*.po`)
+- `target`: the target folder (where to put the compiled JSON file)
 
 Note: Use forward slashes for the paths even if you are on Windows, or you may have problems.
 
