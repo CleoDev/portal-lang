@@ -13,31 +13,30 @@ This localization tool compiles PO files to JSON files.
 
 ## Prerequisites
 
-- You must have [Git](https://git-scm.com/) installed
 - You must have [Node.js](https://nodejs.org/) installed, preferably the latest LTS version
 - You will need a gettext translation editor, such as the free [Poedit](https://poedit.net/)
 
-It is assumed that you have at least a basic understanding of how to use Git and npm (Node.js package manager) from the command line.
-
-It is also assumed that you know how to use Poedit or something similar. However, Poedit is easy to figure out even if you have never used it before.
-
 ## Setup
 
-Clone the Git repo:
+Download the localization tool using the **Download ZIP** option under the **Clone or download** menu (green button) in GitHub.
+Extract it.
 
-```shell
-$ git clone https://github.com/CleoDev/portal-localization
-```
+(If you are familiar with Git, you can also just clone the repository to your computer using the URL provided in the same menu.)
 
-Install the localization tool's dependencies (run from within the `portal-localization` folder):
+Once you have downloaded and extracted (or cloned) the localization tool, navigate into the localization tool folder (`portal-localization` or similar).
+If you see a file called `package.json`, you are in the right folder.
+
+Install the localization tool's dependencies (run from within the localization tool folder):
 
 ```shell
 $ npm install
 ```
 
+The tool is now set up.
+
 ## Usage
 
-To compile a PO file to a JSON file (run from within the `portal-localization` folder):
+To compile a PO file to a JSON file (run from within the localization tool folder):
 
 ```shell
 $ npm run compile -- --source=path/to/source/file.po --target=path/to/target/folder/
