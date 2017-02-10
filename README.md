@@ -32,7 +32,7 @@ Install the localization tool's dependencies (run from within the localization t
 $ npm install
 ```
 
-The tool is now set up.
+The localization tool is now set up.
 
 ## Usage
 
